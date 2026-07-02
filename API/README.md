@@ -1,10 +1,9 @@
 # Weather API
 
-Small Express API to fetch current weather for a city. It supports fetching data from OpenWeatherMap when you provide an API key, or returns mock data if no key is configured.
+Small Express API to fetch current weather for a city. It returns mock weather data for every request.
 
 Endpoints
-- `GET /weather?city=London` — returns mock data when `OPENWEATHER_API_KEY` is not set.
-- `GET /weather?city=London&apikey=YOUR_KEY` — uses provided key for that request.
+- `GET /weather?city=London` — returns dummy weather data for the requested city.
 
 Setup
 
@@ -14,9 +13,7 @@ Setup
 npm install
 ```
 
-2. (Optional) Create `.env` from `.env.example` and set `OPENWEATHER_API_KEY`.
-
-3. Start server:
+2. Start server:
 
 ```bash
 npm start
@@ -26,5 +23,4 @@ Example
 
 ```bash
 curl "http://localhost:3000/weather?city=London"
-curl "http://localhost:3000/weather?city=London&apikey=YOUR_KEY"
 ```
